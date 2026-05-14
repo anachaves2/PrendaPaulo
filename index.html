@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Nosso Case Study | Rita & Paulo</title>
+    <!-- É esta linha que liga o HTML ao teu ficheiro CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-left">
+            <a href="#inicio">Início</a>
+            <a href="#swot">Análise SWOT</a>
+            <a href="#memorias">Memórias</a>
+        </nav>
+        <div class="nav-center">
+            <img src="Imagens/Logo-noBackground.png" alt="Logótipo Rita e Paulo">
+        </div>
+        <div class="nav-right">
+            <a href="#surpresa" class="btn-mensagem">Claim Offer ♡</a>
+        </div>
+
+    </header>
+    <section class="hero-slider">
+        <div class="slider-overlay-text">
+            <h1>A Nossa História</h1>
+            <p>Pequenos momentos, grandes memórias</p>
+        </div>
+
+        <div class="slider-wrapper" id="slider">
+            <div class="slide">
+                <img src="Imagens/IMG_5014.jpeg" alt="Foto 1">
+            </div>
+            <div class="slide">
+                <img src="Imagens/7AB33F61-07B7-4C8A-B817-6FAE0FE5C3F8.jpeg" alt="Foto 2">
+            </div>
+            <div class="slide">
+                <img src="Imagens/IMG_3150.jpeg" alt="Foto 3">
+            </div>
+        </div>
+        <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+
+    </section>
+    <section id="inicio" class="about-section">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="Imagens/IMG_3425.jpeg" alt="A nossa primeira foto juntos">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">O Início da Nossa História</h2>
+                <p class="subtitle">A nossa primeira fotografia</p>
+                
+                <div class="counter-box">
+                    <span id="days-counter" class="counter-number">0</span>
+                    <span class="counter-label">Desde que te conheci</span>
+                </div>
+                
+                <p class="description">Mudaste a minha vida completamente, sem ti ela não seria igual. Obrigada por teres passado tantos dias ao meu lado. Amo-te mais do que tudo! <3 </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="timeline-section" id="roadmap">
+        <h2 class="section-title light-text">Roadmap da Relação</h2>
+        <div class="divider-heart">♡</div>
+        
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <img src="Imagens/champanhe.png" class="custom-icon" alt="Ícone Date">
+                <h4>Primeiro Date</h4>
+                <p class="date">12.10.2022</p>
+                <p>O primeiro contacto com o meu futuro marido.</p>
+            </div>
+            <div class="timeline-item">
+                <img src="Imagens/camera.png" class="custom-icon" alt="Ícone Foto">
+                <h4>Primeira Foto</h4>
+                <p class="date">28.05.2023</p>
+                <p>A primeira memória registada da nossa relação.</p>
+            </div>
+            <div class="timeline-item">
+                <img src="Imagens/destino.png" class="custom-icon" alt="Ícone Viagem">
+                <h4>Primeira Viagem</h4>
+                <p class="date">28.06.2023</p>
+                <p>Um dos momentos mais memoráveis da nossa relação.</p>
+            </div>
+            <div class="timeline-item">
+                <img src="Imagens/lock.png" class="custom-icon" alt="Ícone Cadeado">
+                <h4>Oficialmente Nós</h4>
+                <p class="date">09.10.2023</p>
+                <p>O momento em que nos tornamos oficialmente um casal.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="gallery-section" id="memorias">
+        <h2 class="section-title">Os Nossos Melhores Assets</h2>
+        <div class="divider-heart dark">♡</div>
+        
+        <div class="gallery-grid">
+            <img src="Imagens/IMG_2587.jpeg" alt="Memória 1" class="gallery-img tall">
+            <img src="Imagens/IMG_5013.jpeg" alt="Memória 2" class="gallery-img">
+            <img src="Imagens/IMG_4306.jpeg" alt="Memória 3" class="gallery-img">
+            <img src="Imagens/IMG_3152.jpeg" alt="Memória 4" class="gallery-img tall">
+        </div>
+    </section>
+
+    <section class="swot-section" id="swot">
+        <h2 class="section-title">Análise SWOT</h2>
+        <div class="divider-heart dark">♡</div>
+        <p class="subtitle" style="text-align: center; margin-bottom: 40px;">O que faz desta parceria um sucesso</p>
+        
+       <div class="swot-grid container">
+            <div class="swot-box">
+                <img src="Imagens/code.png" class="custom-icon" alt="Ícone Código">
+                <h3>Strengths</h3>
+                <p>A tua inteligência e a nossa cumplicidade invejável.</p>
+            </div>
+            <div class="swot-box">
+                <img src="Imagens/restaurant.png" class="custom-icon" alt="Ícone Restaurante">
+                <h3>Weaknesses</h3>
+                <p>A nossa incapacidade de decidir o que fazer.</p>
+            </div>
+            <div class="swot-box">
+                <img src="Imagens/birds-love.png" class="custom-icon" alt="Ícone Oportunidades">
+                <h3>Opportunities</h3>
+                <p>Passar o resto da minha vida contigo.</p>
+            </div>
+            <div class="swot-box">
+                <img src="Imagens/burger.png" class="custom-icon" alt="Ícone Ameaças">
+                <h3>Threats</h3>
+                <p>Nós quando estamos com fome ou cansados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secret-section" id="surpresa">
+        <div class="secret-content">
+            <h2 class="section-title light-text">Surpresa Exclusiva</h2>
+            <div class="divider-heart">♡</div>
+            <p>A campanha de aniversário está a terminar. Tens uma recompensa à tua espera.</p>
+            <button class="btn-mensagem outline" onclick="abrirModal()">Desbloquear Presente</button>
+        </div>
+    </section>
+    <div class="filmstrip-section">
+    <div class="filmstrip-track">
+        <div class="filmstrip-holes top"></div>
+        <div class="filmstrip-frames">
+            <img src="Imagens/IMG_0091.jpeg" alt="Memória">
+            <img src="Imagens/7AB33F61-07B7-4C8A-B817-6FAE0FE5C3F8.jpeg" alt="Memória">
+            <img src="Imagens/IMG_1090.jpeg" alt="Memória">
+            <img src="Imagens/IMG_1109.jpeg" alt="Memória">
+            <img src="Imagens/IMG_3146.jpeg" alt="Memória">
+            <img src="Imagens/IMG_1816.jpeg" alt="Memória">
+            <img src="Imagens/IMG_2276.jpeg" alt="Memória">
+            <img src="Imagens/IMG_4972.jpeg" alt="Memória">
+            <img src="Imagens/IMG_2587.jpeg" alt="Memória">
+            <img src="Imagens/IMG_2828.jpeg" alt="Memória">
+            <img src="Imagens/IMG_3150.jpeg" alt="Memória">.
+            <img src="Imagens/IMG_4174.jpeg" alt="Memória">
+            <img src="Imagens/IMG_4245.jpeg" alt="Memória">
+            <img src="Imagens/IMG_3179.jpeg" alt="Memória">
+            <img src="Imagens/IMG_3425.jpeg" alt="Memória">
+            <img src="Imagens/IMG_3741.jpeg" alt="Memória">
+            <img src="Imagens/IMG_4307.jpeg" alt="Memória">
+
+        </div>
+        <div class="filmstrip-holes bottom"></div>
+    </div>
+</div>  
+    <footer class="site-footer">
+        <div class="footer-col">
+
+            <h4>Para sempre nós</h4>
+            <p>Obrigada por seres o meu lugar favorito.<br>Vamos continuar a escrever a nossa história?</p>
+            <p class="footer-heart">♡</p>
+
+        </div>
+        <div class="footer-col">
+            <h4>A nossa banda sonora</h4>
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/5GqvpJ5chy3W0eHz31OOSi?utm_source=generator&theme=0" 
+                width="100%" height="152" frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="footer-bottom">
+            <p>Desenvolvido por Rita ♡ | © 2026 Nós.Dois - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <div class="modal-overlay" id="modalOfertas">
+  <div class="modal-card">
+    <button class="modal-close" onclick="fecharModal()">✕</button>
+    <div class="modal-heart">♡</div>
+    <h2 class="modal-title">Surpresa Exclusiva</h2>
+    <p class="modal-subtitle">Para o meu amor</p>
+    <div class="modal-divider">
+      <p>Neste dia tão especial não quero que te falta nada.<br>Por isso, ofereço-te uma massagem ao corpo. <br>Prometo não reclamar.<br>Amo-te muito e mais!</p>
+    </div>
+    <p class="modal-footer-text">Desenvolvido por Rita ♡</p>
+  </div>
+</div>
+</body>
+</html>

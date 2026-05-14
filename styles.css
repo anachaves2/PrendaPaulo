@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display&display=swap');
+
+/* Reset básico para remover as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF9F6; /* Cor de fundo creme clara */
+}
+
+/* --- ESTILOS DO HEADER ATUALIZADOS --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #FAF9F6;
+    border-bottom: 1px solid #EBEBEB;
+    
+    /* NOVIDADE: Mantém o header fixo no topo ao fazer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Garante que fica sempre por cima de todo o conteúdo */
+}
+
+/* Lado Esquerdo - Navegação */
+.nav-left {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-left a:hover {
+    color: #CBA135;
+}
+
+/* Centro - O teu Logótipo (Agora perfeitamente centrado) */
+.nav-center {
+    /* NOVIDADE: Isto força a caixa a ficar exatamente a meio do ecrã, ignorando as laterais */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center img {
+    /* NOVIDADE: Aumentei o logo. Podes mudar este valor (ex: 80px, 100px, 120px) até estar perfeito! */
+    height: 120px; 
+    display: block;
+}
+
+/* Lado Direito - Botão */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.btn-mensagem {
+    text-decoration: none;
+    background-color: #282828;
+    color: #FFFFFF;
+    padding: 14px 28px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mensagem:hover {
+    background-color: #CBA135;
+    color: #FFFFFF;
+}
+
+/* --- HERO SLIDER --- */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ocupa 80% da altura do ecrã */
+    overflow: hidden; /* Esconde as fotos que estão fora do ecrã */
+    background-color: #2D2D2D;
+}
+
+/* O contentor que desliza com flexbox */
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Transição super suave */
+}
+
+/* Cada foto ocupa 100% da largura do pai */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* A imagem ajusta-se como se fosse um background cover */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+    filter: brightness(60%); /* Escurece a imagem para o texto branco ler-se bem */
+}
+
+/* --- TEXTO POR CIMA DO SLIDER --- */
+.slider-overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 10; /* Fica por cima de tudo */
+    pointer-events: none; /* Deixa clicar através do texto */
+}
+
+.slider-overlay-text h1 {
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif; /* A fonte chique que usámos antes */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.slider-overlay-text p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- BOTÕES DO SLIDER --- */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    z-index: 20;
+    transition: background 0.3s ease;
+    border-radius: 50%;
+}
+
+.slider-btn:hover {
+    background: rgba(203, 161, 53, 0.8); /* O teu tom dourado ao passar o rato */
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
+.slide:nth-child(3) img {
+    /* 50% é o meio horizontal. O segundo valor é a posição vertical. 
+       0% encosta o topo da foto ao topo do contentor. Vai ajustando este valor (ex: 10%, 20%, 30%) 
+       até os vossos rostos ficarem perfeitos no ecrã! */
+    object-position: 50% 15%; 
+}
+
+/* --- SECÇÃO CONTADOR (O INÍCIO) --- */
+.about-section {
+    padding: 100px 20px;
+    background-color: #FAF9F6;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Espaço entre a foto e o texto */
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para não desformatar se o ecrã for pequeno */
+}
+
+/* Estilos da Imagem */
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* A moldura dourada por trás da foto */
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #CBA135; /* O teu Dourado */
+    z-index: -1;
+}
+
+/* Estilos do Texto e Contador */
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2D2D2D;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #CBA135;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.counter-box {
+    margin: 30px 0;
+}
+
+.counter-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; /* Número bem grande! */
+    color: #2D2D2D;
+    line-height: 1;
+    display: block;
+}
+
+.counter-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #666666;
+    margin-top: 10px;
+    display: block;
+}
+
+.description {
+    color: #555555;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* --- UTILITÁRIOS GERAIS --- */
+.light-text { color: #000000; }
+.divider-heart {
+    text-align: center; color: #CBA135; font-size: 1.2rem; margin-bottom: 40px;
+}
+.divider-heart.dark { color: #CBA135; }
+
+/* --- SECÇÃO TIMELINE --- */
+.timeline-section {
+    background-color: #e1e1e1;
+    padding: 80px 20px;
+    text-align: center;
+}
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.timeline-item { color: #FFFFFF; max-width: 180px; }
+.timeline-item .icon { font-size: 2rem; margin-bottom: 15px; }
+.timeline-item h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #CBA135; }
+.timeline-item .date { font-family: monospace; font-size: 0.8rem; color: #909090; margin: 5px 0 10px; }
+.timeline-item p { font-size: 0.85rem; color: #000000; }
+
+/* --- SECÇÃO GALERIA --- */
+.gallery-section { 
+    padding: 80px 20px; 
+    background-color: #FAF9F6; 
+    text-align: center; /* Isto é o que volta a centrar o teu título e o coração! */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Colunas iguais */
+    grid-template-rows: 220px 220px; /* 2 Linhas exatas de 220px de altura */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 4px; 
+}
+
+/* Forçar a posição exata de cada foto (Coordenadas) */
+/* 1ª Foto (Esquerda): Coluna 1, ocupa da linha 1 até à 3 */
+.gallery-img:nth-child(1) { 
+    grid-column: 1; 
+    grid-row: 1 / 3; 
+} 
+
+/* 2ª Foto (Meio Cima): Coluna 2, ocupa apenas a linha 1 */
+.gallery-img:nth-child(2) { 
+    grid-column: 2; 
+    grid-row: 1 / 2; 
+} 
+
+/* 3ª Foto (Meio Baixo): Coluna 2, ocupa apenas a linha 2 */
+.gallery-img:nth-child(3) { 
+    grid-column: 2; 
+    grid-row: 2 / 3; 
+} 
+
+/* 4ª Foto (Direita): Coluna 3, ocupa da linha 1 até à 3 */
+.gallery-img:nth-child(4) { 
+    grid-column: 3; 
+    grid-row: 1 / 3; 
+}
+
+/* Ajuste para o mobile: Volta tudo a ficar 1 foto por linha, centrada */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-auto-rows: 300px; 
+    }
+    
+    /* Desliga as coordenadas forçadas no telemóvel */
+    .gallery-img:nth-child(1),
+    .gallery-img:nth-child(2),
+    .gallery-img:nth-child(3),
+    .gallery-img:nth-child(4) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .slide:nth-child(2) img {
+    /* 50% é o meio horizontal. O segundo valor é a posição vertical. 
+       0% encosta o topo da foto ao topo do contentor. Vai ajustando este valor (ex: 10%, 20%, 30%) 
+       até os vossos rostos ficarem perfeitos no ecrã! */
+    object-position: 75% 15%; 
+}
+
+}
+
+
+/* --- SECÇÃO SWOT --- */
+.swot-section { 
+    padding: 80px 20px; 
+    background-color: #FFFFFF; 
+    text-align: center; /* É só adicionar esta linha! */
+}
+.swot-grid {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+}
+.swot-box {
+    text-align: center; max-width: 200px; padding: 20px;
+}
+.swot-icon {
+    font-size: 2rem; color: #2D2D2D; margin-bottom: 15px;
+}
+.swot-box h3 { font-family: 'Playfair Display', serif; color: #CBA135; margin-bottom: 10px; font-size: 1.2rem;}
+.swot-box p { font-size: 0.85rem; color: #666666; }
+
+/* --- SECÇÃO CHAVE SECRETA --- */
+/* Força o título desta secção a ser branco */
+.secret-section .section-title {
+    color: #FFFFFF;
+}
+.secret-section {
+    color: #FFFFFF;
+    background-image: url('Imagens/IMG_3741.jpeg'); /* Fundo floral escuro */
+    background-size: cover; background-position: center; background-attachment: fixed;
+    padding: 120px 20px; text-align: center; position: relative;
+}
+.secret-section::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(30, 30, 30, 0.85); z-index: 1;
+}
+.secret-content { position: relative; z-index: 2; color: #FFF; }
+.secret-content p { margin-bottom: 30px; letter-spacing: 1px; }
+.btn-mensagem.outline {
+    background: transparent; border: 1px solid #CBA135; padding: 15px 35px; cursor: pointer; color: #FFF; font-family: 'Montserrat', sans-serif; transition: 0.3s;
+}
+.btn-mensagem.outline:hover { background: #CBA135; }
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #FAF9F6; 
+    padding: 60px 20px 20px; 
+    color: #2D2D2D;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: center;
+    text-align: center; 
+    border-top: 1px solid #EAEAEA;
+}
+.footer-col { max-width: 500px; margin-bottom: 30px; }
+.footer-col h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 15px; color: #CBA135; }
+.footer-col p { font-size: 0.85rem; line-height: 1.6; }
+.footer-heart { font-size: 1.5rem; margin-top: 15px; color: #CBA135; }
+.audio-player { width: 100%; margin-top: 10px; }
+.footer-bottom { width: 100%; margin-top: 40px; padding-top: 20px; border-top: 1px solid #EAEAEA; font-size: 0.75rem; color: #888; }
+
+/* --- RESPONSIVE DESIGN (MOBILE) --- */
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    /* Esconde os links no telemóvel para não sobreporem o logo */
+    .nav-left {
+        display: none; 
+    }
+
+    /* Ajusta o logo para não forçar o centro absoluto que quebrava o layout */
+    .nav-center {
+        position: static;
+        transform: none;
+    }
+
+    .nav-center img {
+        height: 60px; /* Logo um bocadinho mais pequeno no mobile */
+    }
+
+    /* Ajusta o botão para caber bem */
+    .btn-mensagem {
+        padding: 10px 15px;
+        font-size: 0.6rem;
+    }
+}
+
+/* --- ÍCONES FLATICON --- */
+.custom-icon {
+    width: 45px;      
+    height: 45px;     
+    margin-bottom: 15px;
+    object-fit: contain; 
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-card {
+    background: #FAF9F6;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e0ddd8;
+}
+.modal-close {
+    position: absolute;
+    top: 14px; right: 16px;
+    background: none; border: none;
+    font-size: 1.2rem; color: #888;
+    cursor: pointer;
+}
+.modal-heart { font-size: 2rem; color: #CBA135; margin-bottom: 0.5rem; }
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; color: #2D2D2D;
+    font-weight: 400; margin-bottom: 0.25rem;
+}
+.modal-subtitle {
+    font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 2px; color: #CBA135; margin-bottom: 1.5rem;
+}
+.modal-divider {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 1.25rem 0; margin-bottom: 1.5rem;
+    font-size: 0.9rem; color: #555; line-height: 1.8;
+}
+.modal-footer-text {
+    font-size: 0.72rem; color: #aaa;
+    margin-top: 1rem; letter-spacing: 1px;
+}
+
+/* --- FITA DE CINEMA --- */
+.filmstrip-section {
+    background-color: #FAF9F6;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.filmstrip-track {
+    background-color: #1a1a1a;
+    padding: 8px 0;
+    position: relative;
+    width: 100%;
+}
+
+.filmstrip-holes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 14px;
+    pointer-events: none;
+}
+
+.filmstrip-holes.top { top: 6px; }
+.filmstrip-holes.bottom { bottom: 6px; }
+
+.filmstrip-holes::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0px,
+        transparent 8px,
+        #FAF9F6 8px,
+        #FAF9F6 22px,
+        transparent 22px,
+        transparent 30px
+    );
+}
+
+.filmstrip-frames {
+    display: flex;
+    gap: 6px;
+    padding: 22px 6px;
+    animation: filmroll 35s linear infinite;
+    width: max-content;
+}
+
+.filmstrip-frames img {
+    height: 180px;
+    width: 130px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #333;
+}
+
+@keyframes filmroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
