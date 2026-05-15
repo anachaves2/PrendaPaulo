@@ -322,13 +322,29 @@ body {
     .gallery-img:nth-child(1),
     .gallery-img:nth-child(2),
     .gallery-img:nth-child(3),
-    .gallery-img:nth-child(4) {
+    .gallery-img:nth-child(4) 
+    {
         grid-column: auto;
         grid-row: auto;
     }
-    .slide:nth-child(2) img {
+    .slide:nth-child(2) img 
+    {
     object-position: 75% 15%; 
-}
+    }
+    .slider-overlay-text h1 {
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif; 
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .slider-overlay-text p {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+    }
 
 }
 
@@ -404,7 +420,7 @@ body {
     }
 
     .nav-center img {
-        height: 60px; 
+        height: 70px; 
     }
 
     .btn-mensagem {
@@ -531,73 +547,3 @@ body {
 }
 
 /* --- RESPONSIVE DESIGN (MOBILE) ATUALIZADO --- */
-/* --- AJUSTE FINAL MOBILE (IPHONE) --- */
-@media screen and (max-width: 768px) {
-
-    /* 1. DEVOLVER A ALTURA AO SLIDER */
-    .hero-slider { 
-        height: 85%; /* Quase o ecrã todo (85%) para não parecer cortado */
-    }
-
-    /* 2. ENCOLHER A LETRA DO SLIDER (A Nossa História) */
-    .slider-overlay-text {
-        top: 75%; /* Sobe um pouco o texto para não bater no fundo */
-        width: 90%; /* Garante que o texto tem espaço lateral */
-    }
-
-    .slider-overlay-text h1 {
-        font-size: 1.8rem !important; /* Letra muito mais pequena para caber numa linha ou duas */
-        letter-spacing: 1px !important;
-    }
-
-    .slider-overlay-text p {
-        font-size: 0.8rem !important;
-        letter-spacing: 1px !important;
-    }
-
-    /* 3. LOGO NO MOBILE (Aumentado como pediste) */
-    .nav-center {
-        position: static;
-        transform: none;
-    }
-
-    .nav-center img {
-        height: 90px !important; /* Logo com bom destaque no topo */
-        width: auto;
-        margin: 5px auto;
-    }
-
-    .navbar {
-        padding: 10px 15px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    /* 4. CENTRAR OS DIAS E O TEXTO DO "INÍCIO" */
-    .about-content {
-        text-align: center !important;
-        display: flex;
-        flex-direction: column; /* Foto em cima, texto em baixo */
-        align-items: center;
-    }
-
-    .about-text {
-        text-align: center !important;
-    }
-
-    .counter-number {
-        font-size: 4rem !important; /* Ajuste para não transbordar */
-        text-align: center;
-        display: block;
-    }
-
-    .counter-label {
-        text-align: center;
-    }
-
-    /* Títulos de outras secções (SWOT, Roadmap) mais pequenos */
-    .section-title {
-        font-size: 1.8rem !important;
-        text-align: center;
-    }
-}
