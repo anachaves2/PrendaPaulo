@@ -531,109 +531,73 @@ body {
 }
 
 /* --- RESPONSIVE DESIGN (MOBILE) ATUALIZADO --- */
-
-/* Breakpoint para telemóveis e tablets pequenos */
+/* --- AJUSTE FINAL MOBILE (IPHONE) --- */
 @media screen and (max-width: 768px) {
 
-    /* --- 1. RESOLVER O HEADER MOBILE --- */
-    .navbar {
-        padding: 10px 20px; /* Menos padding vertical */
-        flex-direction: row; /* Mantém logo e botão lado a lado */
-        justify-content: space-between; /* Encosta o logo à esquerda e botão à direita */
-        height: auto; /* Deixa o header ajustar-se à altura do logo novo */
+    /* 1. DEVOLVER A ALTURA AO SLIDER */
+    .hero-slider { 
+        height: 85vh !important; /* Quase o ecrã todo (85%) para não parecer cortado */
     }
 
-    /* Garante que os links esquerdos continuam escondidos */
-    .nav-left { display: none; }
-
-    .nav-center {
-        position: static;
-        transform: none;
-        margin: 0; /* Remove margens do desktop */
+    /* 2. ENCOLHER A LETRA DO SLIDER (A Nossa História) */
+    .slider-overlay-text {
+        top: 75% !important; /* Sobe um pouco o texto para não bater no fundo */
+        width: 90%; /* Garante que o texto tem espaço lateral */
     }
 
-    /* MELHORIA 1: Aumentar o logo substancialmente no mobile */
-    .nav-center img {
-        height: 100px; /* Aumentei de 60px para 100px. Podes ajustar! */
-        width: auto;
-    }
-
-    .btn-mensagem {
-        padding: 10px 15px;
-        font-size: 0.6rem;
-    }
-
-
-    /* --- 2. REDUZIR O TAMANHO DAS LETRAS NO MOBILE --- */
-    h1, h2, h3, h4, .slider-overlay-text h1, .section-title, .counter-number {
-        letter-spacing: 1px !important; /* Menos espaço entre letras */
-    }
-
-    /* Letra principal do Slider (Hero) */
     .slider-overlay-text h1 {
-        font-size: 2.2rem !important; /* Reduzido de 4rem */
-        line-height: 1.1;
+        font-size: 2.2rem !important; /* Letra muito mais pequena para caber numa linha ou duas */
+        letter-spacing: 1px !important;
     }
 
     .slider-overlay-text p {
         font-size: 0.8rem !important;
+        letter-spacing: 1px !important;
     }
 
-    /* Títulos de secção e do Início */
-    .section-title {
-        font-size: 1.8rem !important; /* Reduzido de 2.5rem */
+    /* 3. LOGO NO MOBILE (Aumentado como pediste) */
+    .nav-center {
+        position: static;
+        transform: none;
     }
 
-    .subtitle {
-        font-size: 0.75rem !important;
-        letter-spacing: 1.5px !important;
+    .nav-center img {
+        height: 90px !important; /* Logo com bom destaque no topo */
+        width: auto;
+        margin: 5px auto;
     }
 
-    /* Reduzir descrição geral */
-    .description, .about-text p {
-        font-size: 0.9rem !important;
-        line-height: 1.6 !important;
+    .navbar {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-
-    /* --- 3. CENTRAR OS DIAS NO MOBILE --- */
+    /* 4. CENTRAR OS DIAS E O TEXTO DO "INÍCIO" */
     .about-content {
-        gap: 30px; /* Menor espaço entre foto e texto ao empilhar */
-        text-align: center; /* Centra tudo na secção */
+        text-align: center !important;
+        display: flex;
+        flex-direction: column; /* Foto em cima, texto em baixo */
+        align-items: center;
     }
 
     .about-text {
-        text-align: center; /* Centra os parágrafos também */
-    }
-
-    /* Melhora o layout do contador ao centrar */
-    .counter-box {
-        margin: 15px 0; /* Menos margem vertical */
-        display: inline-block; /* Ajuda a centrar */
+        text-align: center !important;
     }
 
     .counter-number {
-        font-size: 3.5rem !important; /* Reduzido de 5rem */
+        font-size: 4rem !important; /* Ajuste para não transbordar */
+        text-align: center;
+        display: block;
     }
 
     .counter-label {
-        font-size: 0.8rem !important;
+        text-align: center;
     }
 
-
-    /* --- AJUSTES EXTRA PARA MOBILE (Opcional, mas recomendado) --- */
-    
-    /* Reduzir altura geral das secções */
-    .about-section, .timeline-section, .gallery-section, .swot-section, .secret-section, .site-footer {
-        padding: 50px 20px;
-    }
-
-    /* Ajustar Slider */
-    .hero-slider { height: 50vh; } /* Menos altura no slider para caber bem no ecrã */
-
-    /* Galeria: 1 foto por linha no telemóvel (já tinhas, mas garanti que não quebra) */
-    .gallery-grid {
-        grid-template-columns: 1fr; 
-        grid-auto-rows: auto;
+    /* Títulos de outras secções (SWOT, Roadmap) mais pequenos */
+    .section-title {
+        font-size: 1.8rem !important;
+        text-align: center;
     }
 }
