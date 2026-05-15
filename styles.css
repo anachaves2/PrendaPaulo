@@ -345,7 +345,14 @@ body {
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
     }
-
+    .counter-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #2D2D2D;
+    line-height: 1;
+    display: block;
+    text-align: center;
+    }
 }
 
 
