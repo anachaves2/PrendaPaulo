@@ -536,17 +536,17 @@ body {
 
     /* 1. DEVOLVER A ALTURA AO SLIDER */
     .hero-slider { 
-        height: 85vh !important; /* Quase o ecrã todo (85%) para não parecer cortado */
+        height: 85%; /* Quase o ecrã todo (85%) para não parecer cortado */
     }
 
     /* 2. ENCOLHER A LETRA DO SLIDER (A Nossa História) */
     .slider-overlay-text {
-        top: 75% !important; /* Sobe um pouco o texto para não bater no fundo */
+        top: 75%; /* Sobe um pouco o texto para não bater no fundo */
         width: 90%; /* Garante que o texto tem espaço lateral */
     }
 
     .slider-overlay-text h1 {
-        font-size: 2.2rem !important; /* Letra muito mais pequena para caber numa linha ou duas */
+        font-size: 1.8rem !important; /* Letra muito mais pequena para caber numa linha ou duas */
         letter-spacing: 1px !important;
     }
 
