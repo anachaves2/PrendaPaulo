@@ -346,12 +346,21 @@ body {
         font-family: 'Montserrat', sans-serif;
     }
     .counter-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    color: #2D2D2D;
-    line-height: 1;
-    display: block;
-    text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+        color: #2D2D2D;
+        line-height: 1;
+        display: block;
+        text-align: center;
+    }
+    .counter-label {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #666666;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
     }
 }
 
